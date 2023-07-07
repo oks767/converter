@@ -1,0 +1,28 @@
+@import '../../../assets/scss/variables.scss';
+.wrapper {
+  background-color: $black;
+  display: inline-block;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+.up {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.down {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.button {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  cursor: pointer;
+}

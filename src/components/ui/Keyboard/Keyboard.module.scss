@@ -1,0 +1,27 @@
+@import '../../../assets/scss/variables.scss';
+.wrapper {
+  display: grid;
+  font-family: $font;
+  font-size: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  color: $white;
+  grid-template-rows: repeat(4, 1fr);
+  padding: 15px 15px;
+  // opacity: 1;
+  background-color: #000;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+.item {
+  cursor: pointer;
+  justify-self: center;
+  margin-top: 10px;
+  border-bottom: 2px solid $black-bg;
+}
+.zero {
+  grid-column-start: 2;
+  justify-self: center;
+  cursor: pointer;
+  margin-top: 10px;
+  border-bottom: 1px solid $black-bg;
+}

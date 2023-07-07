@@ -1,0 +1,19 @@
+@import '../../../assets/scss/variables.scss';
+.input {
+  border-bottom: 1px solid $black;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  background-color: transparent;
+  outline: none;
+  width: 100px;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  display: none;
+}
