@@ -1,0 +1,25 @@
+@import '../../../assets/scss/variables.scss';
+.button {
+  background-color: $black;
+  color: $white;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid transparent;
+  font-size: 20px;
+  cursor: pointer;
+  display: block;
+  transition: 0.3s;
+  margin-top: 20px;
+  margin-left: 7px;
+}
+.button:hover {
+  background-color: $black-bg;
+}
+.img {
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}

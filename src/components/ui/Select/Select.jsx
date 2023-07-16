@@ -1,8 +1,22 @@
 import style from './Select.module.scss';
 import Select from 'react-select';
-import options from './options.js';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
+const API_URL = 'https://openexchangerates.org/api/currencies.json';
 const SelectCurrence = () => {
+  const [get, setGet] = useState(null);
+  useEffect(() => {
+    axios.get(API_URL).then((res) => {
+      setGet(res.data);
+    });
+  }, []);
+  if (!get) return null;
+  let arrayCurrency = Object.keys(get).map((e) => ({
+    value: e,
+    label: e,
+  }));
+
   const customStyles = {
     control: (defaultStyles) => ({
       ...defaultStyles,
@@ -32,9 +46,9 @@ const SelectCurrence = () => {
         <option>RUB</option>
       </select> */}
       <Select
-        options={options}
+        options={arrayCurrency}
         styles={customStyles}
-        defaultValue={[options[0]]}
+        defaultValue={arrayCurrency[0]}
         components={{ IndicatorSeparator: () => null }}
       />
     </div>

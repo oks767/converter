@@ -1,8 +1,9 @@
 import styles from './Fielsd.module.scss';
-const Field = (isActive, onShow) => {
+
+const Field = () => {
   return (
     <>
-      <input onClick={() => onShow} className={styles.input} type='number' />
+      <input className={styles.input} type='number' />
     </>
   );
 };
