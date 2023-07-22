@@ -7,15 +7,21 @@ import ButtonConvert from '../ui/ButtonConvert/ButtonConvert';
 import Result from '../Result/Result';
 import Exchange from '../Exchange/Exchange';
 import Keyboard from '../ui/Keyboard/Keyboard.jsx';
+import { useNavigate } from 'react-router-dom';
 
 const { body, container, wrap } = stylesSetting;
 function ConvertPage() {
+  const navigate = useNavigate();
   return (
     <>
       <body className={body}>
         <div className={container}>
           <div className={wrap}>
-            <Back />
+            <Back
+              clickHandler={() => {
+                navigate('/');
+              }}
+            />
             <h1 className={styles.heading}>Convert</h1>
           </div>
           <ButtonConvert />

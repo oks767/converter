@@ -1,0 +1,45 @@
+@import '../../assets/scss/variables.scss';
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+  font-family: $font;
+  align-items: center;
+  margin-top: 40px;
+  background-color: $black;
+  padding: 10px;
+  border-radius: 20px;
+}
+.image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.currently {
+  display: flex;
+}
+.myCurrently {
+  margin: 0;
+}
+.myCurrentlyTwo {
+  color: gray;
+  font-size: 12px;
+  margin: 0;
+  margin-top: 5px;
+}
+.currentlyTextTwo {
+  color: gray;
+  font-size: 12px;
+  margin: 0;
+  margin-top: 5px;
+}
+.currentlyText {
+  margin: 0;
+}
+.heading {
+  font-size: 18px;
+  color: $white;
+  text-align: center;
+  font-family: $font;
+  margin-top: 20px;
+}

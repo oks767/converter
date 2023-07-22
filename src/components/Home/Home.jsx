@@ -6,9 +6,12 @@ import SelectCurrence from '../ui/Select/Select';
 import { useState } from 'react';
 
 import ButtonHome from '../ui/ButtonHome/ButtonHome';
+import AssetsCurrently from '../AssetsCurrently/AssetsCurrently.jsx';
+import { useNavigate } from 'react-router-dom';
 const { body, container, wrap } = stylesSetting;
 const Home = ({ heading = '' }) => {
   const [value, setValue] = useState(12344);
+  const navigate = useNavigate();
   return (
     <body className={body}>
       <div className={container}>
@@ -24,9 +27,21 @@ const Home = ({ heading = '' }) => {
         </div>
         <div className={styles.wrapper}>
           <ButtonHome buttonText='Send' image='/public/enter.svg' />
-          <ButtonHome buttonText='Convert' image='/public/convert.svg' />
+          <ButtonHome
+            buttonText='Convert'
+            image='/public/convert.svg'
+            clickHandler={() => {
+              navigate('/convert');
+            }}
+          />
           <ButtonHome buttonText='Deposit' image='/public/down.svg' />
         </div>
+        <AssetsCurrently
+          currently='Bitcoin'
+          image='/public/bitcoin.svg'
+          currentlyTwo='BTC'
+          heading='My assets'
+        />
       </div>
     </body>
   );

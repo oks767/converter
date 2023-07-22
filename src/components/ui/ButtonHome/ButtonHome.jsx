@@ -1,9 +1,9 @@
 import styles from './ButtonHome.module.scss';
 
-const ButtonHome = ({ buttonText = '', image }) => {
+const ButtonHome = ({ buttonText = '', image, clickHandler }) => {
   return (
     <div>
-      <button className={styles.button}>
+      <button onClick={clickHandler} className={styles.button}>
         {buttonText}
         <img
           className={styles.img}
