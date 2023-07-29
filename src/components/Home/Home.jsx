@@ -1,47 +1,33 @@
 import styles from './Home.module.scss';
-import stylesSetting from '../../assets/scss/settings.module.scss';
-import HeaderHome from '../HeaderHome/HeaderHome';
-
-import SelectCurrence from '../ui/Select/Select';
-import { useState } from 'react';
-
-import ButtonHome from '../ui/ButtonHome/ButtonHome';
-import AssetsCurrently from '../AssetsCurrently/AssetsCurrently.jsx';
+import stylesSettings from '../../assets/scss/settings.module.scss';
 import { useNavigate } from 'react-router-dom';
-const { body, container, wrap } = stylesSetting;
-const Home = ({ heading = '' }) => {
-  const [value, setValue] = useState(12344);
+const Home = ({ bgButton, heading = '', bgImage }) => {
   const navigate = useNavigate();
   return (
-    <body className={body}>
-      <div className={container}>
-        <HeaderHome />
-        <div className={wrap}>
-          <div className={styles.border}>
-            <h2 className={styles.heading}>{heading}</h2>
-            <div className={styles.wrapper}>
-              <input className={styles.input} type='number' value={value} />
-              <SelectCurrence />
-            </div>
+    <body className={stylesSettings.body}>
+      <div className={stylesSettings.container}>
+        <div className={styles.wrapper}>
+          <div className={styles.top}>
+            <div
+              className={styles.img}
+              style={{ backgroundImage: `url(${bgImage})` }}
+            ></div>
+          </div>
+          <div className={styles.middle}>{heading}</div>
+          <div className={styles.bottom}>
+            <button
+              onClick={() => {
+                navigate('/auth');
+              }}
+              className={styles.button}
+            >
+              <div
+                className={styles.imgButton}
+                style={{ backgroundImage: `url(${bgButton})` }}
+              ></div>
+            </button>
           </div>
         </div>
-        <div className={styles.wrapper}>
-          <ButtonHome buttonText='Send' image='/public/enter.svg' />
-          <ButtonHome
-            buttonText='Convert'
-            image='/public/convert.svg'
-            clickHandler={() => {
-              navigate('/convert');
-            }}
-          />
-          <ButtonHome buttonText='Deposit' image='/public/down.svg' />
-        </div>
-        <AssetsCurrently
-          currently='Bitcoin'
-          image='/public/bitcoin.svg'
-          currentlyTwo='BTC'
-          heading='My assets'
-        />
       </div>
     </body>
   );

@@ -1,0 +1,51 @@
+@import '../../assets/scss/variables.scss';
+.wrapper {
+  height: 100vh;
+  //   display: flex;
+  //   align-items: center;
+}
+input {
+  background-color: $black;
+  color: $white;
+  border: 1px solid transparent;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-family: $font, sans-serif;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+button {
+  background-color: $black;
+  border: none;
+  outline: none;
+  padding: 15px 10px;
+  border-radius: 20px;
+  color: $white;
+  font-family: $font, sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+button:hover {
+  background-color: $black-bg;
+}
+.top {
+  height: 50%;
+}
+.img {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  outline: none;
+}
+.labelAvatar {
+  font-family: $font, sans-serif;
+  color: $white;
+}
+.sendAvatar {
+  margin-top: 20px;
+}

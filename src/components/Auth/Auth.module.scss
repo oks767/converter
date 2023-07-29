@@ -1,0 +1,63 @@
+@import '../../assets/scss/variables.scss';
+
+.wrapper {
+  height: 100vh;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-around;
+  // flex-wrap: wrap;
+}
+.top {
+  height: 50%;
+  border: none;
+}
+.img {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  outline: none;
+}
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.input {
+  margin-bottom: 25px;
+  background-color: $black;
+  color: $white;
+  border: 1px solid transparent;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-family: $font, sans-serif;
+  display: block;
+}
+.button {
+  background-color: $black;
+  border: none;
+  outline: none;
+  padding: 15px 10px;
+  border-radius: 20px;
+  color: $white;
+  font-family: $font, sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-right: 10px;
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button:hover {
+  background-color: $black-bg;
+}
+.required {
+  margin-left: 15px;
+  margin-bottom: 20px;
+  font-family: $font;
+  color: $pink;
+}

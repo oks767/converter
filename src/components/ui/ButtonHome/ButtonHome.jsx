@@ -5,10 +5,10 @@ const ButtonHome = ({ buttonText = '', image, clickHandler }) => {
     <div>
       <button onClick={clickHandler} className={styles.button}>
         {buttonText}
-        <img
+        <div
           className={styles.img}
           style={{ backgroundImage: `url(${image})` }}
-        />
+        ></div>
       </button>
     </div>
   );

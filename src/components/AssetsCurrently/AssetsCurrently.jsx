@@ -11,10 +11,10 @@ const AssetsCurrently = ({
       <h1 className={styles.heading}>{heading}</h1>
       <div className={styles.wrapper}>
         <div className={styles.currently}>
-          <img
+          <div
             className={styles.image}
             style={{ backgroundImage: `url(${image})` }}
-          />
+          ></div>
           <div className={styles.currentlyChange}>
             <p className={styles.currentlyText}>{currently}</p>
             <p className={styles.currentlyTextTwo}>{currentlyTwo}</p>

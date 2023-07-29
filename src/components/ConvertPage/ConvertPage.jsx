@@ -19,7 +19,7 @@ function ConvertPage() {
           <div className={wrap}>
             <Back
               clickHandler={() => {
-                navigate('/');
+                navigate('/profile');
               }}
             />
             <h1 className={styles.heading}>Convert</h1>
