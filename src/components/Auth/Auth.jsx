@@ -1,15 +1,12 @@
 import styles from './Auth.module.scss';
 import styleSettings from '../../assets/scss/settings.module.scss';
 import { useForm } from 'react-hook-form';
+import { useAuthPage } from './useAuthPage';
 const { body, container } = styleSettings;
 const Auth = ({ bgImage }) => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const { register, handleSubmit, errors, setType, onSubmit } = useAuthPage();
+
+  // const onSubmit = (data) => console.log(data);
   return (
     <body className={body}>
       <div className={container}>
@@ -33,14 +30,22 @@ const Auth = ({ bgImage }) => {
               type='password'
               {...register('password', { required: true })}
             />
-            {errors.password && (
+            {errors?.password && (
               <div className={styles.required}>This field is required</div>
             )}
             <div className={styles.buttonWrapper}>
-              <button className={styles.button} type='submit'>
+              <button
+                className={styles.button}
+                type='submit'
+                onClick={() => setType('login')}
+              >
                 Sign In
               </button>
-              <button className={styles.button} type='submit'>
+              <button
+                className={styles.button}
+                type='submit'
+                onClick={() => setType('register')}
+              >
                 Registration
               </button>
             </div>
