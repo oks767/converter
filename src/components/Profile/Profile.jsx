@@ -20,7 +20,7 @@ const Profile = ({ heading = '' }) => {
           <div className={styles.border}>
             <h2 className={styles.heading}>{heading}</h2>
             <div className={styles.wrapper}>
-              <input className={styles.input} type='number' value={value} />
+              <input className={styles.input} type='number' />
               <SelectCurrence />
             </div>
           </div>

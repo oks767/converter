@@ -1,9 +1,9 @@
 import styles from './Fielsd.module.scss';
 
-const Field = () => {
+const Field = ({ value = '1' }) => {
   return (
     <>
-      <input className={styles.input} type='number' />
+      <span className={styles.input}></span>
     </>
   );
 };
